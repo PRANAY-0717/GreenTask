@@ -1,0 +1,543 @@
+html,body
+{
+    height:100%;
+    margin:0;
+    padding:0;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    position: relative;
+}
+.bg
+{
+    position: absolute;
+    z-index: -1;
+    height:100%;
+    filter: blur(3px);
+}
+.bg video
+{
+    object-fit: cover;
+}
+header 
+{
+    display: flex;
+    height: 5rem;
+    justify-content: space-between;
+    background-color: rgba(2, 47, 2, 0.643);
+    align-items: center;
+}
+.userName
+{
+    font-family: "Lobster Two", sans-serif;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 5.5rem;
+    color: #fff;
+    text-shadow: 2px 2px 5px #627899;
+    margin-left: 2rem;
+}
+.feature
+{
+    display: flex;
+    justify-content: space-around;
+    width: 25%;
+    align-items: center;
+}
+.rotateBtn
+{
+    background-color: rgba(255, 255, 255, 0.507);
+    height: 3.5rem;
+    width: 5rem;
+    border-radius: 50%;
+    transition: 0.5s ease-in 0s;
+}
+.fontLabel label
+{
+    font-size: 1.5rem;
+    color:#FFFBCE;
+}
+.fontLabel select
+{
+    width: 8rem;
+    background-color: #fffbced8;
+    border-radius: 10px;
+}
+.main
+{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin:0;
+}
+.text
+{
+    color: #92c88a;
+    font-style: italic;
+    font-size: 3rem;
+    text-align: center;
+    text-shadow:2px 2px 7px #A1D09B;
+}
+.text h3
+{
+    margin: 10px 0px 0px 0px ;
+    background-color: rgba(0, 0, 0, 0.335);
+    display: inline-block;
+    width: 20rem;
+    margin-bottom: 1rem;
+    border-radius: 5rem;
+}
+.todoBg
+{
+    position: relative;
+    height:37rem;
+    width: 30rem;
+    background-color: rgba(0, 0, 0, 0.579);
+    margin: auto;
+    box-shadow: 2px 2px 6px black;
+    border-radius: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s linear 0s;
+}
+.todo
+{
+    height: 95%;
+    width: 95%;
+    background-color: rgba(255, 255, 255, 0.171);
+    border-radius: 2rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    padding: 0;
+    position: relative;
+}
+.task
+{
+    height: 85%;
+    width: 95%;
+    overflow: auto;
+    background-color: #99bb8971;
+    border-radius: 2rem;
+    padding: 0;
+    position: relative;
+    z-index: 1;
+}
+.add
+{
+    height: 8%;
+    width: 95%;
+    border-radius: 2rem;
+    background-color: #92c88a;
+    z-index: 1;
+}
+@media (max-width:875px) 
+{
+    .userName
+    {
+        margin: 0rem;
+        font-size: 2.5rem;
+    }
+
+    .rotateBtn
+    {
+        position: fixed;
+        display: none;
+    }
+}
+.tasks
+{
+    border-radius:2rem;
+    display: flex;
+    width: 85%;
+    min-height: 2.5rem;
+    max-height: 3rem;
+    overflow: auto;
+    background-color: #e0f8d4bf;
+    padding: 0;
+    color: #4e3b31;
+}
+.taskCombo
+{
+    margin: 0.5rem 0rem 0.5rem 0rem;
+    width: 100%;
+    min-height:2.5rem;
+    max-width: 430px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    transition: 1s linear 0s;
+}
+.delete
+{
+    text-align: center;
+    width: 1.5rem;
+    height: 1.2rem;
+    background-color: #f3fcf200;
+    border: none;
+    font-size: 1rem;
+    margin-right: 10px;
+    transition: 0.3s ease-out 0s;
+}
+.delete:hover
+{
+    transform: scale(2) translateX(-2px);
+}
+.add 
+{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+.add button
+{
+    border-radius: 1rem;
+    width: 60%;
+    height: 70%;
+    font-size: 1.5rem;
+    font-style: italic;
+    font-weight: 200;
+    font-family: fantasy;
+    background-color: #77f5d650;
+    transition: 0.3s ease-in 0s;
+}
+.add button:hover
+{
+    transform: scale(1.05);
+    font-style: none;
+    background-color: #77f5d6d4;
+}
+/* //here we made the scrollbar invisible  */
+::-webkit-scrollbar
+{
+    background-color: #fff0;
+}
+.pop
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    animation: pops 0.9s ease-in 0s 1 normal forwards;
+}
+@keyframes pops 
+{
+    0% {
+        transform: scale(1);
+        background-color: initial;
+        border-radius: 0;
+    }
+    30% {
+        transform: scaleX(2) scaleY(3.5);
+        background-color: rgba(197, 205, 197, 0.618); /* Earthy green-grey */
+    }
+    60% {
+        border-radius: 2rem;}
+    100% {
+        transform: scaleX(2) scaleY(6.5);
+        background-color: rgba(120, 150, 120, 0.85); /* Earthy green-grey */
+        border-radius: 4rem;
+        box-shadow: 2px 2px 7px black;
+    }
+}
+.afterInp
+{
+    all:unset;
+    height: 20%;
+    width: 80%;
+    background-color: #99BB89;
+    border-radius: 1rem;
+    font-size: 0.5rem;
+    overflow: auto;
+    border: 1.2px solid #3A8040;
+    /* text-align: center; */
+    letter-spacing: 1.9px;
+    padding:1.5px;
+    animation: appear 0.4s linear 0s 1 normal forwards;
+}
+.afterBtn
+{
+    all:unset;
+    border-radius: 1rem;
+    border: 2px solid #7fc85d;
+    width: 30%;
+    height: 20%;
+    text-align: center;
+    font-size: 0.5rem;
+    letter-spacing: 1.5px;
+    transition: 0.3s ease-in 0s;
+    color:wheat;
+    font-weight: 800;
+    background-color: rgba(41, 41, 41, 0.153);
+    animation: appear 0.4s linear 0s 1 normal forwards;
+}
+.afterBtn:hover
+{
+    transform: scale(1.05);
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.343);
+    letter-spacing: 2px;
+}
+.inpTask
+{
+    margin-left: 1rem;
+    font-size: 1.2rem;
+    transition: 0.5s linear;
+}
+@keyframes appear 
+{
+ 0%{opacity: 0;}
+ 20%{opacity: 0.2;}   
+ 40%{opacity: 0.4;}   
+ 60%{opacity: 0.6;}   
+ 80%{opacity: 0.8;}   
+ 100%{opacity: 1;}   
+}
+.ended
+{
+    animation: shrink 1s linear 0s 1 normal forwards;
+}
+@keyframes shrink 
+{
+ from{ opacity: 1;}
+ to{ opacity: 0;}   
+}
+.cut
+{
+    animation: cuts 1s  ease-in 0s 1 normal forwards;
+}
+.btnDlt
+{
+animation: dlt 0.8s linear 0s 1 normal forwards;
+}
+@keyframes cuts
+{
+ 0%{text-decoration: none; opacity: 1;}
+ 5%{text-decoration: line-through;opacity: 0.2;}   
+ 100%{text-decoration: line-through;opacity: 0;}   
+}
+@keyframes dlt 
+{
+    from{transform: scale(2) translateX(0px);opacity: 1;}
+    to{transform: scale(2) translateX(-15rem); opacity: 0;}
+}
+.rotateBtn2
+{
+    background-color: rgba(255, 255, 255, 0.939);
+    height: 3.5rem;
+    width: 5rem;
+    border-radius: 50%;
+    transform: scale(1.1);
+    box-shadow: 2px 2px 6px white;
+}
+.change
+{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 95%;
+}
+.changeSec
+{
+    flex-direction: row;
+    flex-wrap: none;
+    display: inline-flex;
+    align-items: center;
+    max-width: 380px;
+    animation: 1s linear 0s;
+}
+.change2
+{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+.font1
+{
+    font-family: "Lobster", sans-serif;
+}
+.font2
+{
+    font-family: "Shadows Into Light", cursive;
+}
+.font3
+{
+    font-family: "Old Standard TT", serif;
+}
+.font4
+{
+    font-family: "Roboto", sans-serif;
+}
+.font5
+{
+    font-family: "Chewy", system-ui;
+}
+.font0
+{
+    font-family: 'Times New Roman', Times, serif;
+}
+.blurred
+{
+    filter: blur(5px);
+    pointer-events: none;
+    user-select: none;
+}
+.smalls
+{
+    animation: small 1s  ease-in 0s 1 normal forwards;;
+}
+@keyframes small
+{
+    from{transform: scaleY(1);}
+    to{transform: scaleY(0);}
+}
+.allDone
+{
+    position: absolute;
+    height: 1%;
+    opacity: 0;
+    transition: 0.8s linear 0s;
+}
+.disIn
+{
+    flex-shrink: 1;
+    transform: scale(77);
+    opacity: 1;
+    z-index: 5;
+}
+.BG 
+{
+    position: absolute;
+    height: 97%;
+    width: 95%;
+    background-color: #e0f8d477;
+    object-fit: cover;
+    border-radius: 2rem;
+    filter: blur(5px);
+    z-index: 0;
+}
+.setup
+{
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    height: 60%;
+    width: 60%;
+    z-index: 2;
+    color:#996767;
+    font-size: 5rem;
+    padding: 2rem;
+    font-style: italic;
+}
+.setupBg
+{
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    height: 60%;
+    width: 60%;
+    background-color: black;
+    z-index: 2;
+    border-radius: 2rem;
+    overflow: hidden;
+    box-shadow: 1px 1px 1.5rem #285826;
+    filter: blur(0.5px);
+    border: 0.5rem solid rgba(255, 255, 255, 0.223);
+}
+.setupBg video
+{
+    height: 100%;
+    object-fit: cover;
+}
+.setup p
+{
+    position: relative;
+    top: 3rem;
+    margin: 0;
+}
+.sign
+{
+    display: none;
+}
+.setup input
+{
+    appearance: none;
+    all: unset;
+    position: relative;
+    top: 5rem;
+    background-color: rgba(255, 255, 255, 0);
+    border: 0px;
+    box-shadow: 0px;
+    border-bottom: 2rem;
+    height: 15%;
+    width: 60%;
+    font-size: 4rem;
+    font-style: italic;
+    color: #F9F5E3;
+    left: -3rem;
+}
+.ins 
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.ins button
+{
+    position: relative;
+    top:5.2rem;
+    left: -12rem;
+    background-color: rgba(255, 255, 255, 0);
+    font-size: 5rem;
+    border: 0;
+    transform: rotate(-40deg);
+    opacity: 0.5;
+    animation: colorChange 1s linear 0s infinite alternate;
+}
+@keyframes  colorChange
+{
+    0%{color: #FFADAD; transform: scale(1.005) rotate(-40deg);}
+    30%{color: #D895AC;transform: scale(1.010) rotate(-40deg);}
+    60%{color:#A981A4;transform: scale(1.015) rotate(-40deg);}
+    100%{color:#796F92;transform: scale(1.02) rotate(-40deg);}
+}
+@media (max-width:1100px)
+{
+    .sign button 
+    {
+        display: none;
+    }
+}
+@media (max-width:33rem) 
+{
+    .feature
+    {
+        margin-right:2rem ;
+    }
+    .userName
+    {
+        font-size: 2rem;
+    }
+    .todoBg
+    {
+        width: 24rem;
+    }
+    .setup input 
+    {
+        font-size: 2rem;
+    }
+}
+@keyframes scrolling
+{
+    from{transform: scale(0.5); opacity: 0.5;}
+    to{transform: scale(1); opacity: 1;}
+}
+.taskCombo
+{
+    animation: scrolling  linear;
+    animation-timeline: view();
+    animation-range:entry 0 cover 10%;
+}

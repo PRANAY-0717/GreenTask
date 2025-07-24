@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your To-Do</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chewy&family=Lobster&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Macondo&family=Michroma&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Oswald&family=Roboto:ital,wght@0,100..900;1,100..900&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="logoTodo.png">
+</head>
+<body>
+    <!-- for the background -->
+    <div class="bg">
+        <video src="bgVideo.mp4" loop autoplay></video>
+    </div>
+    <header>
+        <div class="userName">Welcome User</div>
+        <div class="feature">
+        <button class="rotateBtn"><img class="rotateBtni" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB7ElEQVR4nO3Yz4tOURzH8ZdRk0higZoNSv4CG2MnKxtJJGz82Mjayk4MK/YUO0sbGyULYpiFQtTEAs0jC5SS8qujW2dyPWbu3Hme557nqvOuU+d+O98fn+ece7/3PmQymRRsxAlcwRRe4zO+4yOmcQuXsA9rtYhlOIrHCIscP3EbezEyTBEH8KZU2HtcxRFsxTosj2tXYxN24hRu4mvJ9wUOY2lKAUVRN0pFPMSeHopYiWN4WYr1AJslYD2exKQf4q4s6TNm8QMcjPdUEfcLjs+x7hEmDYANeBWTPcWYwbIK10q7c7Hr3pm198UKPCsdpTWa4xC+xVyXSzs+ECHXY5Dn8Ww3zY7Sw+DMoITsjwGKnrBFOnbhB37FeV9CiiP1NgYo+kVqTsfcn/oVcjI6Tw2paY3gTlcj7Ynp6LxbGu7VeCPoiaJB3U+4G40JyWQGyCgu4F0Pr+apRgcTsdZ5Od+CQkPNca5KSCcu2tZlH+ZTI3TlHi/tTG2nhewpCHPkXrCeLKRBQhaivj0FIQvx7wf/fy0kzDNPTchCVM9TE7IQ1fPUhCzEn2/ou3UdGyTkhqi+PQUhC1HfnoKQhahvb62QTlwwvljHBgldubfH65kqp4mSY9vH2Soho1HM7M60ccxEEZV/0GUyGX/xG17f2SC/MzttAAAAAElFTkSuQmCC" alt="rotate-screen"></button>
+        <section class="fontLabel">
+        <label for="FontFamily">Font Family</label>
+        <br>
+        <select name="fontFamily" id="FontFamily">
+            <option selected value="0">Default</option>
+            <option value="1" class="font1">Lobster</option>
+            <option value="2" class="font2">Shadows Into Light</option>
+            <option value="3" class="font3">Old Standard TT</option>
+            <option value="4" class="font4">Roboto</option>
+            <option value="5" class="font5">Chewy</option>
+        </select>
+        </section>
+        </div>
+    </header>
+    <main>
+        <!-- this is for the text  -->
+        <div class="text">
+            <h3>To-Do List</h3>
+        </div>
+        <div class="todoBg">
+            <div class="todo">
+                <div class="task font0">
+                    <!-- <section class="taskCombo">
+                        <div class="task1 tasks">
+                            <p class="inpTask">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil voluptatem voluptatum corrupti consequatur neque laboriosam, ullam a quas rem, eius, totam delectus iste velit iusto est ea perferendis ipsa dolores?</p>
+                        </div>
+                        <button class="delete"><i class="fa-solid fa-check deletes"></i></button>
+                    </section>
+                    <section class="taskCombo">
+                        <div class="task2 tasks">
+                            <p class="inpTask"></p>
+                        </div>
+                        <button class="delete"><i class="fa-solid fa-check deletes"></i></button>
+                    </section> -->
+                </div>
+                <div class="add">
+                    <button class="adds">Add a New Task</button>
+                </div>
+                <div class="BG"></div>
+            </div>
+            <img class="allDone" src="allDone.png" alt="You have No task">
+        </div>
+    </main>
+    <footer>
+    </footer>
+    <script src="app.js"></script>
+    <!-- this is the one that will be used for first time login -->
+     <div class="sign">
+     <div class="setupBg">
+        <video src="userBg.mp4" loop autoplay playsinline></video>
+     </div>
+    <div class="setup">
+        <p>Enter Your Name</p>
+        <div class="ins">
+        <input class="txts" type="text" placeholder="Name">
+        <button><i class="fa-solid fa-leaf"></i></button>
+        </div>
+    </div>
+    </div>
+</body>
+</html>
