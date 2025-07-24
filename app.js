@@ -96,14 +96,20 @@ function addElement(newDiv)
 
 function submit(inp)
 {  
-   let val=inp.value.trim();
+let val=inp.value.trim();
    if(val=="")return;
+   console.log(taskStorage);
+    let i=taskStorage.indexOf(clickedDiv.children[0].innerText);
+    if(i!=-1)
+        taskStorage[i]=val;
+    else
+        addStorage(val.trim());
+    console.log(taskStorage);
    console.log(val);
    clickedDiv.children[0].innerText=val;
    inp.parentElement.remove();
    taskNo++;
    document.querySelector(".todo").classList.remove("blurred");
-   addStorage(val.trim());
 }
 
 //now lets add a new task 
