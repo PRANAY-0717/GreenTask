@@ -62,13 +62,14 @@ header
     background-color: #fffbced8;
     border-radius: 10px;
 }
-.main
+main
 {
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     margin:0;
+    flex: 1;
 }
 .text
 {
@@ -202,11 +203,11 @@ header
     font-family: fantasy;
     background-color: #77f5d650;
     transition: 0.3s ease-in 0s;
+    white-space: nowrap;
 }
 .add button:hover
 {
     transform: scale(1.05);
-    font-style: none;
     background-color: #77f5d6d4;
 }
 /* //here we made the scrollbar invisible  */
@@ -524,6 +525,13 @@ animation: dlt 0.8s linear 0s 1 normal forwards;
     .todoBg
     {
         width: 24rem;
+        height: 80vh; /* Adjust height mapping for mobile screens */
+        min-height: 25rem;
+    }
+    .add button
+    {
+        width: 80%;
+        font-size: 1.2rem;
     }
     .setup input 
     {
